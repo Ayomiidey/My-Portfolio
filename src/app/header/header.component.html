@@ -13,19 +13,44 @@
     >
       <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
         <li>
-          <a class="hover:text-gray-500" routerLink="/home">HOME</a>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/home"
+            (click)="closeMenu()"
+            >HOME</a
+          >
         </li>
         <li>
-          <a class="hover:text-gray-500" routerLink="/about">ABOUT</a>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/about"
+            (click)="closeMenu()"
+            >ABOUT</a
+          >
         </li>
         <li>
-          <a class="hover:text-gray-500" routerLink="/services">SERVICES</a>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/services"
+            (click)="closeMenu()"
+            >SERVICES</a
+          >
         </li>
         <li>
-          <a class="hover:text-gray-500" routerLink="/project">PROJECTS</a>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/project"
+            (click)="closeMenu()"
+            >PROJECTS</a
+          >
         </li>
         <li>
-          <a class="hover:text-gray-500" routerLink="/contact">CONTACT</a>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/contact"
+            (click)="closeMenu()"
+            >CONTACT</a
+          >
         </li>
       </ul>
     </div>
@@ -46,3 +71,80 @@
     </div>
   </nav>
 </header>
+
+<!-- <header class="bg-white border-b-2">
+  <nav class="flex justify-between items-center w-[92%] mx-auto h-20">
+  
+    <div class="flex items-center">
+      <span class="text-2xl font-bold" routerLink="/">Quadri Alarape</span>
+    </div>
+
+  
+    <div
+      [ngClass]="{
+        'top-[9%] opacity-100': isMenuOpen,
+        'top-[-100%] opacity-0': !isMenuOpen
+      }"
+      class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 duration-500 ease-in-out transition-opacity"
+    >
+      <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+        <li>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/home"
+            (click)="closeMenu()"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/about"
+            (click)="closeMenu()"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/services"
+            (click)="closeMenu()"
+            >SERVICES</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/project"
+            (click)="closeMenu()"
+            >PROJECTS</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-gray-500"
+            routerLink="/contact"
+            (click)="closeMenu()"
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="flex items-center gap-6">
+      <button
+        class="bg-blue-400 text-white px-5 py-2 rounded-full hover:bg-[#87acec]"
+      >
+        Contact Now
+      </button>
+
+
+      <i
+        [ngClass]="isMenuOpen ? 'fa-times' : 'fa-bars'"
+        class="fa fa-2x cursor-pointer lg:hidden transition-transform duration-500"
+        (click)="toggleMenu()"
+      ></i>
+    </div>
+  </nav>
+</header> -->
