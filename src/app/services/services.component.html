@@ -1,8 +1,8 @@
-<div class="w-full h-full max-w-full mx-auto px-10 mb-60 mt-5">
+<!-- <div class="w-full h-full max-w-full mx-auto px-10 mb-10 mt-5">
   <h2 class="mb-14 text-3xl font-bold text-center">
     My <span class="text-blue-400">Services</span>
   </h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-[13grem]">
     <div
       class="w-full md:w-[30rem] bg-[#a6c1ee] p-8 rounded-[2rem] text-center border-2 border-indigo-400 transition-transform duration-500 hover:scale-105 hover:border-blue-500"
     >
@@ -55,7 +55,214 @@
   </div>
 </div>
 
-<!-- <div class="mx-4 mt-10 mb-10">
+                                      THIS IS MY SERVICE PAGE -->
+
+<div class="w-full h-full max-w-full mx-auto px-10 mb-10 mt-5">
+  <h2 class="mb-14 text-3xl font-bold text-center">
+    My <span class="text-blue-400">Services</span>
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-[4rem]">
+    <div
+      class="w-full md:w-[30rem] bg-[#a6c1ee] p-8 rounded-[2rem] text-center border-2 border-indigo-400 transition-transform duration-500 hover:scale-105 hover:border-blue-500"
+    >
+      <i class="fa-solid fa-code text-3xl mb-4 text-blue-500"></i>
+      <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+      <p class="mb-4 text-justify">
+        At the core of my expertise is web development—bringing digital ideas to
+        life through robust, efficient, and scalable websites. My approach to
+        web development revolves around clean, maintainable code and a
+        user-centric mindset.
+      </p>
+      <span
+        class="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-[#87acec] cursor-pointer"
+        (click)="toggleServiceDescription('web')"
+      >
+        {{ selectedService === "web" ? "Show Less" : "Read More" }}
+      </span>
+    </div>
+
+    <div
+      class="w-full md:w-[30rem] bg-[#a6c1ee] p-8 rounded-[2rem] text-center border-2 border-indigo-400 transition-transform duration-500 hover:scale-105 hover:border-blue-500"
+    >
+      <i class="fa-solid fa-palette text-3xl mb-4 text-blue-500"></i>
+      <h3 class="text-xl font-semibold mb-2">UI/UX Designing</h3>
+      <p class="mb-4">
+        A website or app is only as good as its user experience. UI/UX design is
+        not just about how your website looks, but how it feels for the user. I
+        specialize in creating user interfaces that are both visually appealing
+        and incredibly easy to use.
+      </p>
+      <span
+        class="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-[#87acec] cursor-pointer"
+        (click)="toggleServiceDescription('uiux')"
+      >
+        {{ selectedService === "uiux" ? "Show Less" : "Read More" }}
+      </span>
+    </div>
+    <div
+      class="w-full md:w-[30rem] bg-[#a6c1ee] p-8 rounded-[2rem] text-center border-2 border-indigo-400 transition-transform duration-500 hover:scale-105 hover:border-blue-500"
+    >
+      <i class="fa-solid fa-android text-3xl mb-4 text-blue-500"></i>
+      <h3 class="text-xl font-semibold mb-2">API Integration</h3>
+      <p class="mb-4">
+        API integration is crucial for building powerful applications that
+        leverage the strengths of multiple services. I specialize in creating
+        robust and scalable APIs using NestJS, a progressive Node.js framework
+        that enhances the efficiency and maintainability of backend development.
+      </p>
+      <span
+        class="bg-blue-500 text-white px-5 py-2 rounded-full hover:bg-[#87acec] cursor-pointer"
+        (click)="toggleServiceDescription('api')"
+      >
+        {{ selectedService === "api" ? "Show Less" : "Read More" }}
+      </span>
+    </div>
+  </div>
+  <div>
+    <p class="mt-4" *ngIf="selectedService === 'web'">
+      <strong class="text-2xl"
+        >Web Development: Crafting Seamless, High-Performance Websites</strong
+      >
+      <br /><br />
+      At the core of my expertise is web development—bringing digital ideas to
+      life through robust, efficient, and scalable websites. My approach
+      revolves around clean, maintainable code and a user-centric mindset. I
+      specialize in building responsive, interactive websites that not only look
+      visually stunning but also provide a seamless experience across all
+      devices and platforms.
+
+      <br /><br />
+      Utilizing modern web technologies such as Angular, JavaScript, HTML, CSS,
+      and Tailwind CSS, I ensure your site is optimized for both performance and
+      aesthetics.
+
+      <br /><br />
+      <strong class="text-xl">My web development solutions are:</strong>
+
+      <br /><br />
+      <strong>Responsive and Adaptive:</strong> Your site will be fully
+      responsive, ensuring it works flawlessly on mobile phones, tablets, and
+      desktop computers. In today's fast-paced world, it's essential for your
+      audience to have access to your website anytime, anywhere, without
+      sacrificing functionality.
+
+      <br /><br />
+      <strong>Fast and Efficient:</strong> Speed is critical in retaining users
+      and improving SEO. I optimize every line of code and asset to ensure your
+      website loads quickly, providing an enjoyable user experience.
+
+      <br /><br />
+      <strong>Secure and Reliable:</strong> I follow best practices in web
+      security, ensuring your site is safe from vulnerabilities and attacks.
+      This builds trust with users, knowing their information and experience on
+      your platform are protected.
+
+      <br /><br />
+      Whether you're looking to build an e-commerce platform, a portfolio site,
+      or a custom web solution, I bring your vision to life with tailored
+      solutions that match your goals and objectives.
+    </p>
+
+    <p class="mt-4" *ngIf="selectedService === 'uiux'">
+      <strong class="text-2xl"
+        >UI/UX Design: Elevating User Experience Through Intuitive
+        Interfaces</strong
+      >
+      <br /><br />
+      A website or app is only as good as its user experience. UI/UX design is
+      not just about how your website looks, but how it feels for the user. I
+      specialize in creating user interfaces that are both visually appealing
+      and incredibly easy to use.
+
+      <strong>User-Centered Design:</strong> I believe in designing with the end
+      user in mind. By understanding your target audience and their needs, I
+      create intuitive layouts and flows that make it easy for users to
+      navigate, interact with, and enjoy your product. The goal is to ensure the
+      user experience is as seamless as possible, minimizing friction and
+      enhancing engagement.
+
+      <br /><br />
+
+      <strong>Wireframing and Prototyping:</strong> Before diving into the final
+      design, I create detailed wireframes and prototypes that outline the
+      functionality and flow of your website or app. This process ensures that
+      both you and the users have a clear understanding of the product’s
+      structure and usability before it’s built.
+
+      <br /><br />
+
+      <strong>Design Consistency:</strong> Consistency is key in UI/UX design. I
+      ensure that all elements—buttons, typography, and color schemes—are
+      cohesive and aligned with your brand’s identity. This creates a
+      professional, polished look that resonates with users and strengthens your
+      brand.
+
+      <br /><br />
+
+      <strong>Interactive and Engaging Designs:</strong> I leverage interactive
+      elements, micro-animations, and engaging visuals to create a delightful
+      experience. These small but significant touches add a sense of
+      sophistication and enhance the overall user journey.
+
+      <br /><br />
+
+      With a focus on user empathy, creativity, and technical skill, my goal is
+      to deliver UI/UX designs that not only meet but exceed user expectations.
+      A great interface should feel effortless, guiding users toward the actions
+      they want to take in the simplest and most intuitive way possible.
+    </p>
+
+    <p class="mt-4" *ngIf="selectedService === 'api'">
+      <strong class="text-2xl"
+        >API Integration: Connecting Applications Seamlessly</strong
+      >
+      <br /><br />
+      In today's interconnected digital landscape, effective API integration is
+      crucial for building powerful applications that leverage the strengths of
+      multiple services. I specialize in creating robust and scalable APIs using
+      NestJS, a progressive Node.js framework that enhances the efficiency and
+      maintainability of backend development.
+
+      <br /><br />
+      <strong class="text-xl">My API integration services include:</strong>
+
+      <br /><br />
+      <strong>Custom API Development:</strong> I design and implement RESTful
+      APIs tailored to your specific needs, ensuring smooth communication
+      between your frontend and backend systems. This allows for seamless data
+      exchange and enhances overall application performance.
+
+      <br /><br />
+      <strong>Third-Party API Integration:</strong> Whether you need to
+      integrate payment gateways, social media platforms, or other third-party
+      services, I ensure that the integration is smooth and secure. My approach
+      focuses on minimizing latency while maximizing reliability and security,
+      providing a cohesive experience for your users.
+
+      <br /><br />
+      <strong>Data Management and Security:</strong> I prioritize data integrity
+      and security throughout the API integration process. Implementing best
+      practices for authentication and authorization, I ensure that your API is
+      safe from vulnerabilities, safeguarding sensitive user information.
+
+      <br /><br />
+      <strong>Scalable Architecture:</strong> Leveraging the modular
+      architecture of NestJS, I create scalable APIs that can grow with your
+      application. This flexibility allows for easy maintenance and the addition
+      of new features as your business needs evolve.
+
+      <br /><br />
+      Whether you need a custom API for your web application or want to
+      integrate existing services, I bring my expertise in NestJS to deliver
+      reliable and efficient solutions that drive your application's success.
+    </p>
+  </div>
+</div>
+
+<!--  THIS IS MY OLD SERVICE PAGE
+                                      
+
+<div class="mx-4 mt-10 mb-10">
   <h2 class="mb-8 text-3xl font-bold text-center">
     My <span class="text-blue-400">Services</span>
   </h2>
