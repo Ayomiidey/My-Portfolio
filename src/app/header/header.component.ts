@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,13 +10,15 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  isMenuOpen = false;
+  isMobileMenuOpen: boolean = false; // Controls the mobile menu visibility
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+  constructor(private router: Router) {}
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
   closeMenu() {
-    this.isMenuOpen = false;
+    this.isMobileMenuOpen = false;
   }
 }

@@ -1,4 +1,4 @@
-<header class="bg-white border-b-2">
+<!-- <header class="bg-white border-b-2">
   <nav class="flex justify-between items-center w-[92%] mx-auto h-20">
     <div class="flex items-center">
       <span class="text-2xl font-bold" routerLink="/">Quadri Alarape</span>
@@ -9,12 +9,12 @@
         'top-[9%]': isMenuOpen,
         'top-[-100%]': !isMenuOpen
       }"
-      class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 duration-500"
+      class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 duration-400"
     >
       <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/home"
             (click)="closeMenu()"
             >HOME</a
@@ -22,7 +22,7 @@
         </li>
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/about"
             (click)="closeMenu()"
             >ABOUT</a
@@ -30,7 +30,7 @@
         </li>
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/services"
             (click)="closeMenu()"
             >SERVICES</a
@@ -38,7 +38,7 @@
         </li>
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/project"
             (click)="closeMenu()"
             >PROJECTS</a
@@ -46,7 +46,7 @@
         </li>
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/contact"
             (click)="closeMenu()"
             >CONTACT</a
@@ -72,7 +72,7 @@
   </nav>
 </header>
 
-<!-- <header class="bg-white border-b-2">
+ <header class="bg-white border-b-2">
   <nav class="flex justify-between items-center w-[92%] mx-auto h-20">
   
     <div class="flex items-center">
@@ -85,12 +85,12 @@
         'top-[9%] opacity-100': isMenuOpen,
         'top-[-100%] opacity-0': !isMenuOpen
       }"
-      class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 duration-500 ease-in-out transition-opacity"
+      class="md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 duration-400 ease-in-out transition-opacity"
     >
       <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/home"
             (click)="closeMenu()"
             >HOME</a
@@ -98,7 +98,7 @@
         </li>
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/about"
             (click)="closeMenu()"
             >ABOUT</a
@@ -106,7 +106,7 @@
         </li>
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/services"
             (click)="closeMenu()"
             >SERVICES</a
@@ -114,7 +114,7 @@
         </li>
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/project"
             (click)="closeMenu()"
             >PROJECTS</a
@@ -122,7 +122,7 @@
         </li>
         <li>
           <a
-            class="hover:text-gray-500"
+            class="hover:text-gray-400"
             routerLink="/contact"
             (click)="closeMenu()"
             >CONTACT</a
@@ -142,9 +142,80 @@
 
       <i
         [ngClass]="isMenuOpen ? 'fa-times' : 'fa-bars'"
-        class="fa fa-2x cursor-pointer lg:hidden transition-transform duration-500"
+        class="fa fa-2x cursor-pointer lg:hidden transition-transform duration-400"
         (click)="toggleMenu()"
       ></i>
     </div>
   </nav>
 </header> -->
+<header
+  class="fixed top-0 left-0 w-full h-[4rem] bg-gray-800 text-white flex items-center justify-between px-6 z-30 shadow-lg"
+>
+  <div class="flex items-center">
+    <button
+      (click)="toggleMobileMenu()"
+      class="p-2 bg-gray-700 rounded-md lg:hidden"
+      aria-label="Toggle Mobile Menu"
+    >
+      {{ isMobileMenuOpen ? "✖" : "☰" }}
+    </button>
+
+    <a routerLink="/" class="text-xl font-bold ml-4 cursor-pointer"
+      >Quadri Alarape</a
+    >
+  </div>
+
+  <nav class="hidden lg:flex space-x-6">
+    <a class="hover:text-gray-400" routerLink="/home" (click)="closeMenu()"
+      >HOME</a
+    >
+    <a class="hover:text-gray-400" routerLink="/about" (click)="closeMenu()"
+      >ABOUT</a
+    >
+    <a class="hover:text-gray-400" routerLink="/services" (click)="closeMenu()"
+      >SERVICES</a
+    >
+    <a class="hover:text-gray-400" routerLink="/project" (click)="closeMenu()"
+      >PROJECTS</a
+    >
+  </nav>
+
+  <div
+    class="fixed top-[4rem] left-0 h-full w-64 bg-gray-800 text-white shadow-lg p-5 transform transition-transform duration-300 overflow-y-auto z-40 lg:hidden"
+    [ngClass]="{
+      'translate-x-0': isMobileMenuOpen,
+      '-translate-x-full': !isMobileMenuOpen
+    }"
+  >
+    <a
+      routerLink="/home"
+      (click)="closeMenu()"
+      class="block py-2 hover:text-gray-300"
+      >HOME</a
+    >
+    <a
+      routerLink="/about"
+      (click)="closeMenu()"
+      class="block py-2 hover:text-gray-300"
+      >ABOUT</a
+    >
+    <a
+      routerLink="/services"
+      (click)="closeMenu()"
+      class="block py-2 hover:text-gray-300"
+      >SERVICES</a
+    >
+    <a
+      routerLink="/project"
+      (click)="closeMenu()"
+      class="block py-2 hover:text-gray-300"
+      >PROJECTS</a
+    >
+  </div>
+
+  <div
+    *ngIf="isMobileMenuOpen"
+    (click)="toggleMobileMenu()"
+    class="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-30 lg:hidden"
+  ></div>
+</header>
